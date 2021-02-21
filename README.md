@@ -10,6 +10,14 @@ The project includes the implementation of Arbitrary-precision fraction, utilizi
 
 * Users can remove/update any part for the coding competition.
 
+#### How to test?
+
+Run instructions below in a terminal
+
+```sh
+
+```
+
 #### Usage
 
 ```java
@@ -56,3 +64,4 @@ The project has been tested with:
 
 *   JUnit 5
 
+*   Apache Maven 3.6.3

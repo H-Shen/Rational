@@ -17,7 +17,8 @@ Run instructions below in a terminal
 ```sh
 git clone https://github.com/H-Shen/Rational.git
 cd Rational
-mvn verify
+mvn compile
+mvn test
 mvn clean
 ```
 

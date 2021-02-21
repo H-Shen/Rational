@@ -15,7 +15,11 @@ The project includes the implementation of Arbitrary-precision fraction, utilizi
 Run instructions below in a terminal
 
 ```sh
-
+git clone https://github.com/H-Shen/Rational.git
+cd Rational
+mvn build
+mvn test
+mvn clean
 ```
 
 #### Usage

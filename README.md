@@ -1,4 +1,4 @@
-![CI](https://github.com/H-Shen/Caches/workflows/Caches%20CI/badge.svg)
+![Java CI with Maven](https://github.com/H-Shen/Rational/actions/workflows/maven.yml/badge.svg)
 
 #### An implementation of Arbitrary-Precision Fraction in Java v0.01
 

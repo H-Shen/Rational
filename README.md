@@ -25,35 +25,44 @@ mvn clean
 #### Usage
 
 ```java
-Rational a = new Rational(1, 2);
-Rational b = new Rational(3, 4);
-Rational c = Rational.ZERO;
+class Example {
+    void usage() {
+        Rational a = new Rational(1, 2);
+        Rational b = new Rational(3, 4);
+        Rational c = Rational.ZERO;
 
-System.out.println(a.add(a)); // 1/2 + 1/2 = 1/1
-System.out.println(a.add(b)); // 1/2 + 3/4 = 5/4
-System.out.println(b.add(c)); // 3/4 + 0/1 = 3/4
-System.out.println(c.add(a)); // 0/1 + 1/2 = 1/2
+        System.out.println(a.add(a)); // 1/2 + 1/2 = 1/1
+        System.out.println(a.add(b)); // 1/2 + 3/4 = 5/4
+        System.out.println(b.add(c)); // 3/4 + 0/1 = 3/4
+        System.out.println(c.add(a)); // 0/1 + 1/2 = 1/2
 
-System.out.println(a.subtract(a)); // 1/2 - 1/2 = 0/1
-System.out.println(a.subtract(b)); // 1/2 - 3/4 = -1/4
-System.out.println(b.subtract(c)); // 3/4 - 0/1 = 3/4
-System.out.println(c.subtract(a)); // 0/1 - 1/2 = -1/2
+        System.out.println(a.subtract(a)); // 1/2 - 1/2 = 0/1
+        System.out.println(a.subtract(b)); // 1/2 - 3/4 = -1/4
+        System.out.println(b.subtract(c)); // 3/4 - 0/1 = 3/4
+        System.out.println(c.subtract(a)); // 0/1 - 1/2 = -1/2
 
-System.out.println(a.multiply(a)); // (1/2) * (1/2) = 1/4
-System.out.println(a.multiply(b)); // (1/2) * (3/4) = 3/8
-System.out.println(b.multiply(c)); // (3/4) * (0/1) = 0/1
-System.out.println(c.multiply(a)); // (0/1) * (1/2) = 0/1
+        System.out.println(a.multiply(a)); // (1/2) * (1/2) = 1/4
+        System.out.println(a.multiply(b)); // (1/2) * (3/4) = 3/8
+        System.out.println(b.multiply(c)); // (3/4) * (0/1) = 0/1
+        System.out.println(c.multiply(a)); // (0/1) * (1/2) = 0/1
 
-System.out.println(a.divide(a)); // (1/2) / (1/2) = 1/1
-System.out.println(a.divide(b)); // (1/2) / (3/4) = 2/3
-//System.out.println(b.divide(c)); // => ArithmeticException - divide by zero
-System.out.println(c.divide(a)); // (0/1) / (1/2) = 0/1
+        System.out.println(a.divide(a)); // (1/2) / (1/2) = 1/1
+        System.out.println(a.divide(b)); // (1/2) / (3/4) = 2/3
+        //System.out.println(b.divide(c)); // => ArithmeticException - divide by zero
+        System.out.println(c.divide(a)); // (0/1) / (1/2) = 0/1
 
-System.out.println(a.negate()); // -1/2
-System.out.println(a.max(b));   // 3/4
-System.out.println(a.min(c));   // 0
-System.out.println(b.doubleValue());  // 0.75
-System.out.println(Rational.MINUS_ONE.abs());    // 1
+        System.out.println(a.negate()); // -1/2
+        System.out.println(a.max(b));   // 3/4
+        System.out.println(a.min(c));   // 0
+        System.out.println(b.doubleValue());  // 0.75
+        System.out.println(Rational.MINUS_ONE.abs());    // 1
+
+        System.out.println(a.pow(0));   // 1
+        System.out.println(a.pow(1));   // 1/2
+        System.out.println(a.pow(-1));  // 2
+        System.out.println(a.pow(3));   // (1/2)^3 = 1/8
+    }
+}
 ```
 
 #### Requirements

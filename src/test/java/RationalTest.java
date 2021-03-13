@@ -1807,4 +1807,13 @@ class RationalTest {
         assertEquals("-10/3", new Rational(10, -3).toString());
         assertEquals("-10/3", new Rational(new BigInteger("10"), new BigInteger("-3")).toString());
     }
+
+    @Test
+    public void testPow() {
+        assertEquals(Rational.ONE, new Rational(12311, 991212).pow(0));
+        assertEquals(Rational.ONE, new Rational(new BigInteger("192380919038011113111321"),
+                new BigInteger("7171771731230179011131")).pow(0));
+        assertEquals(new Rational(12881, 19199112), new Rational(12881, 19199112).pow(1));
+        assertEquals(new Rational(19199112, 12881), new Rational(12881, 19199112).pow(-1));
+    }
 }

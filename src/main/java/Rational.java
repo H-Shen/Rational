@@ -452,4 +452,23 @@ public class Rational extends Number implements Comparable<Rational>, Serializab
     public double doubleValue() {
         return isInteger() ? numerator.doubleValue() : numerator.doubleValue() / denominator.doubleValue();
     }
+
+    /**
+     * <p>
+     * Returns a <code>Rational</code> whose value is
+     * <tt>(this<sup>exponent</sup>)</tt>, returning the result in reduced form.
+     * </p>
+     *
+     * @param exponent exponent to which this <code>Rational</code> is to be raised.
+     * @return <tt>this<sup>exponent</sup></tt> as a <code>Rational</code>.
+     */
+    public Rational pow(final int exponent) {
+        if (exponent == 0) {
+            return ONE;
+        }
+        if (exponent < 0) {
+            return new Rational(denominator.pow(-exponent), numerator.pow(-exponent));
+        }
+        return new Rational(numerator.pow(exponent), denominator.pow(exponent));
+    }
 }

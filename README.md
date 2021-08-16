@@ -4,12 +4,6 @@
 
 The project includes the implementation of Arbitrary-precision fraction, utilizing BigIntegers for numerator and denominator. Fraction is always kept in lowest terms. Fraction is immutable and guaranteed not to have a null numerator or denominator. Denominator will always be positive (thus sign is carried by numerator), the denominator is not allowed to be zero.
 
-#### NOTICE
-
-* This implementation is working for the coding competition purpose.
-
-* Users can remove/update any part for the coding competition.
-
 #### How to test?
 
 Run instructions below in a terminal
